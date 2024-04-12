@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="task.css">
+</head>
+<body>
+   <h1>Student Form</h1>
+   <div class = "details">
+   <!--<form class="formList">-->
+      <table  border='1' class="firstTable">
+        <tr>
+            <td>Name</td>
+            <td ><input id = "name"> </td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td><input id="age" class="name1"></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td><input id="gender" class=></td>
+        </tr>
+        <tr>
+            <td>Course</td>
+            <td><input id="course"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input id="email"></td>
+            
+        </tr>
+        <tr>
+           <td class="lastRow"><button class="save" onclick="save1()">Save</button></td>
+            
+        </tr>
+     </table>
+      
+   <!--</form>-->
+
+</div>
+
+<div class = "detailsSecond">
+    <table border='1' id="table1" class="table2">
+        <tr>
+            <td >Name</td>
+            <td>Age</td>
+            <td>Course</td>
+            <td>Gender</td>
+            <td>Email</td>
+            <td>Action</td>
+        </tr>
+    </table>
+</div>
+</body>
+<script>
+    var name1=document.getElementById("name")
+    var age=document.getElementById("age")
+    var course=document.getElementById("course")
+    var gender=document.getElementById("gender")
+    var email=document.getElementById("email")
+    
+    function save1(){
+        var table1=document.getElementById("table1")
+        var tr = document.createElement('tr')
+        var nametd = document.createElement('td')
+        var agetd = document.createElement('td')
+        var coursetd = document.createElement('td')
+        var gendertd = document.createElement('td')
+        var emailtd = document.createElement('td')
+        var deletetd = document.createElement('td')
+        var deleteButton  = document.createElement('button')
+        nametd.textContent = name1.value;
+        agetd.textContent = age.value;
+        coursetd.textContent = course.value;
+        gendertd.textContent = gender.value;
+        emailtd.textContent = email.value;
+        deleteButton.textContent="Delete"
+
+        deleteButton.onclick=function (){
+           deleteButton.parentElement.parentElement.remove();
+        }
+        tr.appendChild(nametd);
+        tr.appendChild(agetd)
+        tr.appendChild(coursetd)
+        tr.appendChild(gendertd)
+        tr.appendChild(emailtd)
+        deletetd.appendChild(deleteButton)
+        tr.appendChild(deletetd)
+        table1.appendChild(tr);
+        
+
+      
+    }
+  
+    
+      
+   </script>
+
+
+
+
+
+</html>

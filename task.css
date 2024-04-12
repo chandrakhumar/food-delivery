@@ -1,0 +1,30 @@
+*{
+    padding:0;
+    margin:0;
+}
+h1{
+    text-align: center;
+    margin-top: 100px;
+}
+.details{
+   margin-left: 650px;
+   margin-top:50px;
+   text-align:center;
+}
+.lastRow{
+   display:inline-block;
+   margin-inline-start: 50px;
+}
+.save{
+    width:100px;
+    background-color:aqua;
+    
+}
+.detailsSecond{
+    margin-left: 600px;
+    margin-top: 40px;
+   
+}
+.table2{
+    width:400px;
+}
